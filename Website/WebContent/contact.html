@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<style>
+input[type=text],
+select {
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 1px;
+box-sizing: border-box;
+}
+#abc{
+	width: 100%;
+	height: 5%;
+	background-color: black;
+	
+}
+
+
+</style>
+<link href="CSS/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script>
+function validation()
+{
+var x = document.forms["reg"]["firstname"].value;
+if (!x == "/^([a-zA-Z])$/"||x=="") {
+alert("Enter your First Name");
+return false;
+}
+var x = document.forms["reg"]["lastname"].value;
+if (x == "") {
+alert("Last Name must be filled out");
+return false;
+}
+y = document.getElementById("mobile").value;
+if (isNaN(y) || y.length<10||y.length>10) {
+alert("Mobile should be valid");
+return false;
+}
+}
+</script>
+<div id="MainWrapper">
+ 
+  <div id="content">
+    <div id="header">
+      <h1>SEO Experts</h1>
+    </div>
+    <div id="WhiteBox">
+      
+     
+        <form name="reg" action="./Servlet" onsubmit="return validation()" method="post">
+<div>
+<h1>Registration Form</h1><br>
+<b>First Name:</b><input type="text" id="fname" name="firstname"><br><br>
+<b>Last Name:</b><input type="text" id="lname" name="lastname"><br><br>
+<b>Email Id:</b><input type="text" id="email" name="email"><br><br>
+<b>Mobile no.:</b><input type="text" id="mobile" name="mobile"><br><br>
+<b>Age:</b><input type="text" id="age" name="age"><br><br>
+<b>Gender:</b>&nbsp&nbsp&nbsp
+<input type="radio" name="radio">&nbsp Male&nbsp&nbsp&nbsp
+<input type="radio" name="radio">Female<br><br>
+
+<b>Message:</b><input type="text" id="msg" name="message"><br><br>
+
+&nbsp&nbsp&nbsp<input type="submit" value="Submit">
+
+      </div>
+      
+	
+  </div>
+</div>
+<div id="abc">
+    <footer>
+    	<ul>
+        	<a href="index.html"><li>HOME</li></a>
+            <a href="services.html"><li>SERVICES</li></a>
+            <a href="contact.html"><li>CONTACTS</li></a>
+        </ul>
+        <p>Copyright &copy; SEO Experts</p>
+    </footer>'
+	</div>
+</body>
+</html>
